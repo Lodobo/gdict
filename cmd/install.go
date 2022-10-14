@@ -18,20 +18,6 @@ import (
 
 func main() {
 
-	home, err := os.UserHomeDir() // Path to home directory
-	checkErr(err)
-
-	// open database and create it if it doesn't exist
-	var dbpath string = home + "/.local/share/gdict/dictionary.db" // Path to db
-	log.SetFlags(log.Ltime)
-	log.Println("Creating dictionary database...")
-	db, err := sql.Open("sqlite3", dbpath)
-	if errors.Is(err, os.ErrNotExist) {
-		file, err := os.Create(dbpath)
-		checkErr(err)
-		file.Close()
-	}
-
 	// Create TUI
 	var options []string
 	options = append(options,
@@ -66,6 +52,21 @@ func main() {
 	printer.KeyConfirm = keys.Enter
 	printer.KeySelect = keys.Space
 	selectedOptions, _ := printer.Show()
+
+	// open database and create it if it doesn't exist
+	home, err := os.UserHomeDir() // Path to home directory
+	checkErr(err)
+	err = os.MkdirAll(home+"/.local/share/gdict", os.ModePerm)
+	checkErr(err)
+	log.SetFlags(log.Ltime)
+	log.Println("Creating dictionary database...")
+	var dbpath string = home + "/.local/share/gdict/dictionary.db" // Path to db
+	db, err := sql.Open("sqlite3", dbpath)
+	if errors.Is(err, os.ErrNotExist) {
+		file, err := os.Create(dbpath)
+		checkErr(err)
+		file.Close()
+	}
 
 	// Install selected languages
 	for _, lang := range selectedOptions {
@@ -192,6 +193,7 @@ func main() {
 			createIndex("zh", db)
 		}
 	}
+
 	fmt.Println("\nDone !")
 }
 
@@ -255,6 +257,7 @@ func unzipFile(file_name string) {
 
 func add_table(file_name string) {
 	log.SetFlags(log.Ltime)
+	log.Println("Creating dictionary database...")
 	log.Println("Reading " + file_name + "...")
 	home, err := os.UserHomeDir()
 	checkErr(err)
