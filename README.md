@@ -18,6 +18,11 @@ $ make install
 gdict will be installed in `~/.local/bin` and the
 sqlite database will be created in `~/.local/share/gdict`
 
+Make sure `~/.local/bin` is in $PATH. To add the directory to path, add the following line to `~/.bashrc` or `~/.profile`:
+```bash
+export PATH="$HOME/local/bin:$PATH"
+```
+
 ## Dependencies
 The Go compiler is required to build this program. Make sure you have go version 1.18 or newer. You can install it from [Go's official website](https://go.dev/doc/install)
 
