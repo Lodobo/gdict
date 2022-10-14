@@ -7,6 +7,7 @@ An offline CLI dictionary written in go, using data from wiktionary.
 #### Clone the Repository:
 ```bash
 $ git clone https://github.com/Lodobo/gdict
+$ cd gdict
 ```
 
 #### build and install:
