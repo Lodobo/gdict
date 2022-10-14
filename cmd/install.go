@@ -255,7 +255,6 @@ func unzipFile(file_name string) {
 
 func add_table(file_name string) {
 	log.SetFlags(log.Ltime)
-	log.Println("Creating dictionary database...")
 	log.Println("Reading " + file_name + "...")
 	home, err := os.UserHomeDir()
 	checkErr(err)
