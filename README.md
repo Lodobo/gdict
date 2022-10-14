@@ -20,7 +20,7 @@ sqlite database will be created in `~/.local/share/gdict`
 
 Make sure `~/.local/bin` is in $PATH. To add the directory to path, add the following line to `~/.bashrc` or `~/.profile`:
 ```bash
-export PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 ```
 
 ## Dependencies
