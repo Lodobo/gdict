@@ -19,7 +19,7 @@ gdict will be installed in `~/.local/bin` and the
 sqlite database will be created in `~/.local/share/gdict`
 
 ## Dependencies
-The Go compiler is required to build this program. Make sure you have go version 1.18 or newer.
+The Go compiler is required to build this program. Make sure you have go version 1.18 or newer. You can install it from [Go's official website](https://go.dev/doc/install)
 
 ## Usage of gdict:
 
