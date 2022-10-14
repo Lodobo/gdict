@@ -58,6 +58,8 @@ func main() {
 	checkErr(err)
 	err = os.MkdirAll(home+"/.local/share/gdict", os.ModePerm)
 	checkErr(err)
+	err = os.MkdirAll(home+"/.local/bin", os.ModePerm)
+	checkErr(err)
 	var dbpath string = home + "/.local/share/gdict/dictionary.db" // Path to db
 	db, err := sql.Open("sqlite3", dbpath)
 	if errors.Is(err, os.ErrNotExist) {
