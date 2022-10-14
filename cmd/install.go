@@ -47,7 +47,7 @@ func main() {
 		"Chinese",           // zh
 	)
 
-	printer := pterm.DefaultInteractiveMultiselect.WithMaxHeight(24).WithOptions(options)
+	printer := pterm.DefaultInteractiveMultiselect.WithMaxHeight(24).WithOptions(options).WithDefaultText("Select languages to install:")
 	printer.Filter = false
 	printer.KeyConfirm = keys.Enter
 	printer.KeySelect = keys.Space
