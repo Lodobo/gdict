@@ -21,7 +21,7 @@ install -m 755 gdict ~/.local/bin # install program to ~/.local/bin
 $ git clone https://github.com/Lodobo/gdict
 $ cd gdict
 ```
-#### build and install:
+#### Build and install:
 ```bash
 $ make install
 ```
