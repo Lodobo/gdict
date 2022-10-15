@@ -4,17 +4,27 @@ An offline CLI dictionary written in go, using data from wiktionary.
 ![screenshot.png](https://raw.githubusercontent.com/Lodobo/gdict/main/screenshot.png)
 
 ## Installation
+### From release:
+```sh
+# Download latest binary
+curl -LO https://github.com/Lodobo/gdict/releases/latest/download/gdict.AMD64
+curl -LO https://github.com/Lodobo/gdict/releases/latest/download/install.AMD64
+```
+```sh
+mkdir -p ~/.local/bin # create folder
+install -m 755 gdict ~/.local/bin # install program to ~/.local/bin
+./install # run the install script
+```
+### From source:
 #### Clone the Repository:
 ```bash
 $ git clone https://github.com/Lodobo/gdict
 $ cd gdict
 ```
-
 #### build and install:
 ```bash
 $ make install
 ```
-
 gdict will be installed in `~/.local/bin` and the
 sqlite database will be created in `~/.local/share/gdict`
 
@@ -22,7 +32,6 @@ Make sure `~/.local/bin` is in $PATH. To add the directory to path, add the foll
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
 ```
-
 ## Dependencies
 The Go compiler is required to build this program. Make sure you have go version 1.18 or newer. You can install it from [Go's official website](https://go.dev/doc/install)
 
