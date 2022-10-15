@@ -27,7 +27,7 @@ $ make install
 ```
 gdict will be installed in `~/.local/bin` and the
 sqlite database will be created in `~/.local/share/gdict`
-
+### Note:
 Make sure `~/.local/bin` is in $PATH. To add the directory to path, add the following line to `~/.bashrc` or `~/.profile`:
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
