@@ -246,7 +246,7 @@ func fetch_tables(db *sql.DB) []string {
 	checkErr(err)
 	var langs_installed []string
 	var result int
-	var lang_list = [22]string{"en", "ar", "da", "de", "es", "fi", "fr", "hi", "is", "it", "ja", "la", "no", "nb", "nn", "nl", "pl", "pt", "ru", "se", "sv", "ur", "te", "zh"}
+	var lang_list = [24]string{"en", "ar", "da", "de", "es", "fi", "fr", "hi", "is", "it", "ja", "la", "no", "nb", "nn", "nl", "pl", "pt", "ru", "se", "sv", "ur", "te", "zh"}
 	for _, l := range lang_list {
 		stmt.QueryRow(l).Scan(&result)
 		if result == 1 {
