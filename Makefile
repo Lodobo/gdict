@@ -1,11 +1,14 @@
 build:
-	go build cmd/gdict.go
-	go build cmd/install.go
+	mkdir -p build
+	go build -o build/  cmd/gdict.go
+	go build -o build/ cmd/install.go
 install:
-	go build cmd/gdict.go
-	go build cmd/install.go
-	install -m 755 gdict ~/.local/bin
-	./install
+	mkdir -p build
+	go build -o build/ cmd/gdict.go
+	go build -o build/ cmd/install.go
+	mkdir -p ~/.local/bin
+	install -m 755 build/gdict ~/.local/bin
+	./build/install
 uninstall:
 	rm ~/.local/bin/gdict
 	rm ~/.local/share/gdict/dictionary.db
