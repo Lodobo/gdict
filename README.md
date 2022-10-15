@@ -6,7 +6,7 @@ An offline CLI dictionary written in go, using data from wiktionary.
 ## Installation
 ### From release:
 ```sh
-# Download latest binary
+# Download latest binaries
 curl -LO https://github.com/Lodobo/gdict/releases/latest/download/gdict.AMD64
 curl -LO https://github.com/Lodobo/gdict/releases/latest/download/install.AMD64
 ```
