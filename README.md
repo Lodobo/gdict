@@ -76,6 +76,6 @@ The Go compiler is required to build this program. Make sure you have go version
 
 ## See also
 - Tatu Ylonen's [Wiktextract](https://github.com/tatuylonen/wiktextract): A utility for extracting data from wiktionary. The lexical data used by gdict comes from dumps provided by Ylonen on [kaikki.org](https://kaikki.org/) 
-- [dict.py](https://github.com/Lodobo/dict.py): The first version of this software written in python
+- [rdict](https://github.com/Lodobo/dict.py): Another version of this software written in rust
 -  BetaPictoris`s [dict](https://github.com/BetaPictoris/dict): another command line dictionary
 - [wordnet](https://wordnet.princeton.edu/): A large lexical database of glosses and synonyms
